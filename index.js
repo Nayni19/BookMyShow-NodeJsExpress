@@ -38,6 +38,6 @@ app.post("/user-register", async (req, res) => {
     return res.json({ userAdded: addNewUser, message: "User was added !!!" });
 });
 
-app.listen(5000, () => {
-    console.log("My EXPRESS App is Running.....")
+app.listen(process.env.PORT || 5000, () => {
+    console.log("Server is running...")
 });
